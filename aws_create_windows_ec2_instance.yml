@@ -101,6 +101,7 @@
         device_id: "{{ item }}"
         release_on_disassociation: yes
         region: eu-central-1
+        # had to add in_vpc: yes in order to work
         in_vpc: yes
       loop: "{{ ec2.instance_ids }}"
 
